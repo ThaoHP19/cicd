@@ -26,5 +26,5 @@ job:
      with:
       context:
       push: true
-      tag: ${{ secrets.DOCKERHUB_USERNAME }}/docker-cicd:${{ step.date.outputs.DATE }}      
+      tag: ${{ secrets.DOCKERHUB_USERNAME }}/docker-cicd:${{ steps.date.outputs.DATE }}      
       
