@@ -4,7 +4,7 @@ on:
   push:
     branches: main
 
-job: 
+jobs: 
   build-and-push:
     runs-on: ubutu-latest
     steps:
