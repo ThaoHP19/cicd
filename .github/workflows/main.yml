@@ -13,7 +13,7 @@ jobs:
 
       - name: Set date as tag
         id: date
-        run: echo "::set-output name=DATE::$(TZ=Asia/Tokyo date +'%y%m%d%H%M')"
+        run: echo "::set-output name=DATE::$(TZ=Asia/Tokyo date +'%Y%m%d%H%M')"
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2.0.0
