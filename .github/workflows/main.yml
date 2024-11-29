@@ -39,8 +39,7 @@ jobs:
                 git config --global user.name ${{ secrets.GITHUBUSER }}
                 git clone https://github.com/${{ secrets.GITHUBUSER }}/deploy.git
                 cd deploy/
-                yq e '.services.nginx.image = "${{ secrets.DOCKERHUB_USERNAME }}/dockercicd:${{ steps.date.outputs.DATE }}"' 
--i docker-compose.yml
+                yq e '.services.nginx.image = "${{ secrets.DOCKERHUB_USERNAME }}/dockercicd:${{ steps.date.outputs.DATE }}"' -i docker-compose.yml
                 git add docker-compose.yml
                 git commit -m ${{ github.run_number }} -a
                 git push origin main
